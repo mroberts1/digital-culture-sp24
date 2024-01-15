@@ -1,0 +1,25 @@
+$VAR1 = {
+          'fahrenheit' => '30.15',
+          'dewpoint_fahrenheit' => 1674510284,
+          'dewpoint_celsius' => 1674510284,
+          'updated' => 1674510284,
+          'clouds' => 100,
+          'visibility_kilometers' => 1207,
+          'conditions' => 'Mist',
+          'temperature_celsius' => '30.15',
+          'temperature_fahrenheit' => '30.15',
+          'wind_milesperhour' => '9.22',
+          'wind_direction' => 'NW',
+          'celsius' => '30.15',
+          'sunrise' => 1674475958,
+          'pressure' => 998,
+          'humidity' => 93,
+          'moonrise' => 1674510284,
+          'visibility_miles' => 1207,
+          'moonphase' => 'Concord',
+          'place' => 'Concord',
+          'moonset' => 1674510284,
+          'wind_kilometersperhour' => '9.22',
+          'sunset' => 1674510544
+        };
+
