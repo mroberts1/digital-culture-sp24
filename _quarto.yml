@@ -18,16 +18,6 @@ website:
         file: index.qmd
       - text: Syllabus
         file: syllabus.qmd
-      - text: "Pages"
-        menu: 
-          - w2-lurking.qmd
-          - w3-timelines.qmd
-          - w4-afrofuturism.qmd
-          - w5-digital-imageworlds.qmd
-          - w9-aiff.qmd
-      - text: "Resources"
-        menu:
-          - resources/mastodon.qmd
     right:
       - icon: envelope
         aria-label: envelope
