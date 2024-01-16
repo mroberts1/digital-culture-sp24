@@ -18,7 +18,6 @@ library(palmerpenguins)
 ## VM303-01 Studies in Digital Media & Culture
 
 ::: {layout="[[49, -2, 49]]"}
-
 ```{ojs}
 //| echo: false
 graphic = {
@@ -179,18 +178,15 @@ Note on formats: A number of texts listed in the bibliography are available as e
 
 2024-01-16_Tues
 
-**Terminal Lucidity**\
-Fisher, "'[The Slow Cancellation of the Future](https://canvas.emerson.edu/courses/1932613/files/144544397?wrap=1)'"
+Introduction
 
 Film: *The Shining*\
 *Everywhere at the End of Time* (The Caretaker)
 
 2024-01-18_Thur
 
-**Internet Über Alles**\
-Hito Steyerl, "[Too Much World: Is The Internet Dead?](https://www.e-flux.com/journal/49/60004/too-much-world-is-the-internet-dead/)" (2013) \[[pdf](https://canvas.emerson.edu/courses/1932613/files/144544369?wrap=1)\]
-
-Hito Steyerl, "[In Defence of the Poor Image](https://www.e-flux.com/journal/10/61362/in-defense-of-the-poor-image/)" (2009) \[[pdf](https://canvas.emerson.edu/courses/1932613/files/144727898?wrap=1)\]
+**Terminal Lucidity**\
+Fisher, "'[The Slow Cancellation of the Future](https://canvas.emerson.edu/courses/1932613/files/144544397?wrap=1)'"
 
 ------------------------------------------------------------------------
 

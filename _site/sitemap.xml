@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mroberts.emerson.build/courses/vm-303-01/sp23/observable.html</loc>
-    <lastmod>2024-01-06T08:28:27.794Z</lastmod>
+    <lastmod>2024-01-15T18:00:04.897Z</lastmod>
   </url>
   <url>
     <loc>https://mroberts.emerson.build/courses/vm-303-01/sp23/w9-aiff.html</loc>
@@ -43,5 +43,9 @@
   <url>
     <loc>https://mroberts.emerson.build/courses/vm-303-01/sp23/syllabus.html</loc>
     <lastmod>2024-01-14T21:37:11.977Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mroberts.emerson.build/courses/vm-303-01/sp23/altered-world.html</loc>
+    <lastmod>2024-01-15T18:09:23.779Z</lastmod>
   </url>
 </urlset>
