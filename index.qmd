@@ -105,6 +105,7 @@ imageContext = FileAttachment("owl.jpg").image().then(image => {
 })
 ```
 
+````{=html}
 <!--```{ojs}
 d3 = require("d3@7")
 
@@ -145,6 +146,7 @@ height = 500
 width = 500
 ```
 -->
+````
 
 [Department of Visual & Media Arts](https://emerson.edu/academics/academic-departments/visual-media-arts)\
 [Emerson College](https://emerson.edu/)\
