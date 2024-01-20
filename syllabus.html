@@ -141,44 +141,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link active" href="./syllabus.html" aria-current="page"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-pages" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Pages</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-pages">    
-        <li>
-    <a class="dropdown-item" href="./w2-lurking.html">
- <span class="dropdown-text">W2: Lurking</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./w3-timelines.html">
- <span class="dropdown-text">W3: Alternate Timelines</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./w4-afrofuturism.html">
- <span class="dropdown-text">W4: Afrofuturism</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./w5-digital-imageworlds.html">
- <span class="dropdown-text">W5: Digital Imageworlds</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./w9-aiff.html">
- <span class="dropdown-text">W9: AI Film Festival 2023</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Resources</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
-        <li>
-    <a class="dropdown-item" href="./resources/mastodon.html">
- <span class="dropdown-text">Mastodon: Quickstart</span></a>
-  </li>  
-    </ul>
-  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -230,97 +192,97 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="vm303-01-studies-in-digital-media-culture" class="level2">
 <h2 class="anchored" data-anchor-id="vm303-01-studies-in-digital-media-culture">VM303-01 Studies in Digital Media &amp; Culture</h2>
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="23" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 22;"><span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>graphic <span class="op">=</span> {</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> quads <span class="op">=</span> <span class="kw">new</span> <span class="fu">TinyQueue</span>([<span class="kw">new</span> <span class="fu">Quad</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> width<span class="op">,</span> width)]<span class="op">,</span> (a<span class="op">,</span> b) <span class="kw">=&gt;</span> b<span class="op">.</span><span class="at">score</span> <span class="op">-</span> a<span class="op">.</span><span class="at">score</span>)<span class="op">;</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> context <span class="op">=</span> DOM<span class="op">.</span><span class="fu">context2d</span>(width<span class="op">,</span> width)<span class="op">;</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  context<span class="op">.</span><span class="at">canvas</span><span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">width</span> <span class="op">=</span> <span class="st">"100%"</span><span class="op">;</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> <span class="kw">true</span><span class="op">;</span> <span class="op">++</span>i) {</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> q <span class="op">=</span> quads<span class="op">.</span><span class="fu">pop</span>()<span class="op">;</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (q <span class="op">===</span> <span class="kw">undefined</span> <span class="op">||</span> q<span class="op">.</span><span class="at">score</span> <span class="op">&lt;</span> <span class="dv">50</span>) <span class="cf">break</span><span class="op">;</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> qs <span class="op">=</span> q<span class="op">.</span><span class="fu">split</span>()<span class="op">;</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> qsi <span class="op">=</span> d3<span class="op">.</span><span class="fu">interpolate</span>([q<span class="op">,</span> q<span class="op">,</span> q<span class="op">,</span> q]<span class="op">,</span> qs)<span class="op">;</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    qs<span class="op">.</span><span class="fu">forEach</span>(quads<span class="op">.</span><span class="at">push</span><span class="op">,</span> quads)<span class="op">;</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">let</span> j <span class="op">=</span> <span class="dv">1</span><span class="op">,</span> m <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">1</span><span class="op">,</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(q<span class="op">.</span><span class="at">w</span> <span class="op">/</span> <span class="dv">10</span>))<span class="op">;</span> j <span class="op">&lt;=</span> m<span class="op">;</span> <span class="op">++</span>j) {</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> t <span class="op">=</span> d3<span class="op">.</span><span class="fu">easeCubicInOut</span>(j <span class="op">/</span> m)<span class="op">;</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>      context<span class="op">.</span><span class="fu">clearRect</span>(q<span class="op">.</span><span class="at">x</span><span class="op">,</span> q<span class="op">.</span><span class="at">y</span><span class="op">,</span> q<span class="op">.</span><span class="at">w</span><span class="op">,</span> q<span class="op">.</span><span class="at">h</span>)<span class="op">;</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span> (<span class="kw">const</span> s <span class="kw">of</span> <span class="fu">qsi</span>(t)) {</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        context<span class="op">.</span><span class="at">fillStyle</span> <span class="op">=</span> s<span class="op">.</span><span class="at">color</span><span class="op">;</span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>        context<span class="op">.</span><span class="fu">beginPath</span>()</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        context<span class="op">.</span><span class="fu">moveTo</span>(s<span class="op">.</span><span class="at">x</span> <span class="op">+</span> s<span class="op">.</span><span class="at">w</span><span class="op">,</span> s<span class="op">.</span><span class="at">y</span> <span class="op">+</span> s<span class="op">.</span><span class="at">h</span> <span class="op">/</span> <span class="dv">2</span>)<span class="op">;</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>        context<span class="op">.</span><span class="fu">arc</span>(s<span class="op">.</span><span class="at">x</span> <span class="op">+</span> s<span class="op">.</span><span class="at">w</span> <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> s<span class="op">.</span><span class="at">y</span> <span class="op">+</span> s<span class="op">.</span><span class="at">h</span> <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> s<span class="op">.</span><span class="at">w</span> <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">2</span> <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="cn">PI</span>)<span class="op">;</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>        context<span class="op">.</span><span class="fu">fill</span>()<span class="op">;</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>      <span class="kw">yield</span> context<span class="op">.</span><span class="at">canvas</span><span class="op">;</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>}</span>
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="21" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 20;"><span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>graphic <span class="op">=</span> {</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> quads <span class="op">=</span> <span class="kw">new</span> <span class="fu">TinyQueue</span>([<span class="kw">new</span> <span class="fu">Quad</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> width<span class="op">,</span> width)]<span class="op">,</span> (a<span class="op">,</span> b) <span class="kw">=&gt;</span> b<span class="op">.</span><span class="at">score</span> <span class="op">-</span> a<span class="op">.</span><span class="at">score</span>)<span class="op">;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> context <span class="op">=</span> DOM<span class="op">.</span><span class="fu">context2d</span>(width<span class="op">,</span> width)<span class="op">;</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  context<span class="op">.</span><span class="at">canvas</span><span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">width</span> <span class="op">=</span> <span class="st">"100%"</span><span class="op">;</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> <span class="kw">true</span><span class="op">;</span> <span class="op">++</span>i) {</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> q <span class="op">=</span> quads<span class="op">.</span><span class="fu">pop</span>()<span class="op">;</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (q <span class="op">===</span> <span class="kw">undefined</span> <span class="op">||</span> q<span class="op">.</span><span class="at">score</span> <span class="op">&lt;</span> <span class="dv">50</span>) <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> qs <span class="op">=</span> q<span class="op">.</span><span class="fu">split</span>()<span class="op">;</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> qsi <span class="op">=</span> d3<span class="op">.</span><span class="fu">interpolate</span>([q<span class="op">,</span> q<span class="op">,</span> q<span class="op">,</span> q]<span class="op">,</span> qs)<span class="op">;</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    qs<span class="op">.</span><span class="fu">forEach</span>(quads<span class="op">.</span><span class="at">push</span><span class="op">,</span> quads)<span class="op">;</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">let</span> j <span class="op">=</span> <span class="dv">1</span><span class="op">,</span> m <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">1</span><span class="op">,</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(q<span class="op">.</span><span class="at">w</span> <span class="op">/</span> <span class="dv">10</span>))<span class="op">;</span> j <span class="op">&lt;=</span> m<span class="op">;</span> <span class="op">++</span>j) {</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> t <span class="op">=</span> d3<span class="op">.</span><span class="fu">easeCubicInOut</span>(j <span class="op">/</span> m)<span class="op">;</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>      context<span class="op">.</span><span class="fu">clearRect</span>(q<span class="op">.</span><span class="at">x</span><span class="op">,</span> q<span class="op">.</span><span class="at">y</span><span class="op">,</span> q<span class="op">.</span><span class="at">w</span><span class="op">,</span> q<span class="op">.</span><span class="at">h</span>)<span class="op">;</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span> (<span class="kw">const</span> s <span class="kw">of</span> <span class="fu">qsi</span>(t)) {</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>        context<span class="op">.</span><span class="at">fillStyle</span> <span class="op">=</span> s<span class="op">.</span><span class="at">color</span><span class="op">;</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>        context<span class="op">.</span><span class="fu">beginPath</span>()</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        context<span class="op">.</span><span class="fu">moveTo</span>(s<span class="op">.</span><span class="at">x</span> <span class="op">+</span> s<span class="op">.</span><span class="at">w</span><span class="op">,</span> s<span class="op">.</span><span class="at">y</span> <span class="op">+</span> s<span class="op">.</span><span class="at">h</span> <span class="op">/</span> <span class="dv">2</span>)<span class="op">;</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>        context<span class="op">.</span><span class="fu">arc</span>(s<span class="op">.</span><span class="at">x</span> <span class="op">+</span> s<span class="op">.</span><span class="at">w</span> <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> s<span class="op">.</span><span class="at">y</span> <span class="op">+</span> s<span class="op">.</span><span class="at">h</span> <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> s<span class="op">.</span><span class="at">w</span> <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">2</span> <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="cn">PI</span>)<span class="op">;</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        context<span class="op">.</span><span class="fu">fill</span>()<span class="op">;</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>      <span class="kw">yield</span> context<span class="op">.</span><span class="at">canvas</span><span class="op">;</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>width <span class="op">=</span> <span class="dv">1024</span></span>
 <span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>width <span class="op">=</span> <span class="dv">1024</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>area_power <span class="op">=</span> <span class="fl">0.25</span></span>
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>area_power <span class="op">=</span> <span class="fl">0.25</span></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Quad {</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">constructor</span>(x<span class="op">,</span> y<span class="op">,</span> w<span class="op">,</span> h) {</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> [r<span class="op">,</span> g<span class="op">,</span> b<span class="op">,</span> error] <span class="op">=</span> <span class="fu">colorFromHistogram</span>(<span class="fu">computeHistogram</span>(x<span class="op">,</span> y<span class="op">,</span> w<span class="op">,</span> h))<span class="op">;</span></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="at">x</span> <span class="op">=</span> x<span class="op">,</span> <span class="kw">this</span><span class="op">.</span><span class="at">y</span> <span class="op">=</span> y<span class="op">,</span> <span class="kw">this</span><span class="op">.</span><span class="at">w</span> <span class="op">=</span> w<span class="op">,</span> <span class="kw">this</span><span class="op">.</span><span class="at">h</span> <span class="op">=</span> h<span class="op">;</span></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="at">color</span> <span class="op">=</span> <span class="vs">`#</span><span class="sc">${</span>(<span class="bn">0x1000000</span> <span class="op">+</span> (r <span class="op">&lt;&lt;</span> <span class="dv">16</span>) <span class="op">+</span> (g <span class="op">&lt;&lt;</span> <span class="dv">8</span>) <span class="op">+</span> b)<span class="op">.</span><span class="fu">toString</span>(<span class="dv">16</span>)<span class="op">.</span><span class="fu">substring</span>(<span class="dv">1</span>)<span class="sc">}</span><span class="vs">`</span><span class="op">;</span></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="at">score</span> <span class="op">=</span> error <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">pow</span>(w <span class="op">*</span> h<span class="op">,</span> area_power)<span class="op">;</span></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">split</span>() {</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> dx <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">w</span> <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> x1 <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">x</span><span class="op">,</span> x2 <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">x</span> <span class="op">+</span> dx<span class="op">;</span></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> dy <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">h</span> <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> y1 <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">y</span><span class="op">,</span> y2 <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">y</span> <span class="op">+</span> dy<span class="op">;</span></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>      <span class="kw">new</span> <span class="fu">Quad</span>(x1<span class="op">,</span> y1<span class="op">,</span> dx<span class="op">,</span> dy)<span class="op">,</span></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>      <span class="kw">new</span> <span class="fu">Quad</span>(x2<span class="op">,</span> y1<span class="op">,</span> dx<span class="op">,</span> dy)<span class="op">,</span></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>      <span class="kw">new</span> <span class="fu">Quad</span>(x1<span class="op">,</span> y2<span class="op">,</span> dx<span class="op">,</span> dy)<span class="op">,</span></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>      <span class="kw">new</span> <span class="fu">Quad</span>(x2<span class="op">,</span> y2<span class="op">,</span> dx<span class="op">,</span> dy)</span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">;</span></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">computeHistogram</span>(x<span class="op">,</span> y<span class="op">,</span> w<span class="op">,</span> h) {</span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> {data} <span class="op">=</span> imageContext<span class="op">.</span><span class="fu">getImageData</span>(x<span class="op">,</span> y<span class="op">,</span> w<span class="op">,</span> h)<span class="op">;</span></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> histogram <span class="op">=</span> <span class="kw">new</span> <span class="bu">Uint32Array</span>(<span class="dv">1024</span>)<span class="op">;</span></span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> n <span class="op">=</span> data<span class="op">.</span><span class="at">length</span><span class="op">;</span> i <span class="op">&lt;</span> n<span class="op">;</span> i <span class="op">+=</span> <span class="dv">4</span>) {</span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>    <span class="op">++</span>histogram[<span class="dv">0</span> <span class="op">*</span> <span class="dv">125</span> <span class="op">+</span> data[i <span class="op">+</span> <span class="dv">0</span>]]<span class="op">;</span></span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>    <span class="op">++</span>histogram[<span class="dv">1</span> <span class="op">*</span> <span class="dv">205</span> <span class="op">+</span> data[i <span class="op">+</span> <span class="dv">1</span>]]<span class="op">;</span></span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>    <span class="op">++</span>histogram[<span class="dv">2</span> <span class="op">*</span> <span class="dv">145</span> <span class="op">+</span> data[i <span class="op">+</span> <span class="dv">2</span>]]<span class="op">;</span></span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>    <span class="op">++</span>histogram[<span class="dv">3</span> <span class="op">*</span> <span class="dv">156</span> <span class="op">+</span> data[i <span class="op">+</span> <span class="dv">3</span>]]<span class="op">;</span></span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> histogram<span class="op">;</span></span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">weightedAverage</span>(histogram) {</span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> total <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> value <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">256</span><span class="op">;</span> <span class="op">++</span>i) total <span class="op">+=</span> histogram[i]<span class="op">,</span> value <span class="op">+=</span> histogram[i] <span class="op">*</span> i<span class="op">;</span></span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>  value <span class="op">/=</span> total<span class="op">;</span></span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> error <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">256</span><span class="op">;</span> <span class="op">++</span>i) error <span class="op">+=</span> (value <span class="op">-</span> i) <span class="op">**</span> <span class="dv">2</span> <span class="op">*</span> histogram[i]<span class="op">;</span></span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> [value<span class="op">,</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sqrt</span>(error <span class="op">/</span> total)]<span class="op">;</span></span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">colorFromHistogram</span>(histogram) {</span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> [r<span class="op">,</span> re] <span class="op">=</span> <span class="fu">weightedAverage</span>(histogram<span class="op">.</span><span class="fu">subarray</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">256</span>))<span class="op">;</span></span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> [g<span class="op">,</span> ge] <span class="op">=</span> <span class="fu">weightedAverage</span>(histogram<span class="op">.</span><span class="fu">subarray</span>(<span class="dv">256</span><span class="op">,</span> <span class="dv">512</span>))<span class="op">;</span></span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> [b<span class="op">,</span> be] <span class="op">=</span> <span class="fu">weightedAverage</span>(histogram<span class="op">.</span><span class="fu">subarray</span>(<span class="dv">512</span><span class="op">,</span> <span class="dv">768</span>))<span class="op">;</span></span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> [</span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(r)<span class="op">,</span></span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(g)<span class="op">,</span></span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(b)<span class="op">,</span></span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>    re <span class="op">*</span> <span class="fl">0.2989</span> <span class="op">+</span> ge <span class="op">*</span> <span class="fl">0.5870</span> <span class="op">+</span> be <span class="op">*</span> <span class="fl">0.1140</span></span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">;</span></span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>imageContext <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"owl.jpg"</span>)<span class="op">.</span><span class="fu">image</span>()<span class="op">.</span><span class="fu">then</span>(image <span class="kw">=&gt;</span> {</span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> context <span class="op">=</span> DOM<span class="op">.</span><span class="fu">context2d</span>(width<span class="op">,</span> width<span class="op">,</span> <span class="dv">1</span>)<span class="op">;</span></span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>  context<span class="op">.</span><span class="fu">drawImage</span>(image<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> width<span class="op">,</span> width)<span class="op">;</span></span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> context<span class="op">;</span></span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Quad {</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>  <span class="fu">constructor</span>(x<span class="op">,</span> y<span class="op">,</span> w<span class="op">,</span> h) {</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> [r<span class="op">,</span> g<span class="op">,</span> b<span class="op">,</span> error] <span class="op">=</span> <span class="fu">colorFromHistogram</span>(<span class="fu">computeHistogram</span>(x<span class="op">,</span> y<span class="op">,</span> w<span class="op">,</span> h))<span class="op">;</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="at">x</span> <span class="op">=</span> x<span class="op">,</span> <span class="kw">this</span><span class="op">.</span><span class="at">y</span> <span class="op">=</span> y<span class="op">,</span> <span class="kw">this</span><span class="op">.</span><span class="at">w</span> <span class="op">=</span> w<span class="op">,</span> <span class="kw">this</span><span class="op">.</span><span class="at">h</span> <span class="op">=</span> h<span class="op">;</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="at">color</span> <span class="op">=</span> <span class="vs">`#</span><span class="sc">${</span>(<span class="bn">0x1000000</span> <span class="op">+</span> (r <span class="op">&lt;&lt;</span> <span class="dv">16</span>) <span class="op">+</span> (g <span class="op">&lt;&lt;</span> <span class="dv">8</span>) <span class="op">+</span> b)<span class="op">.</span><span class="fu">toString</span>(<span class="dv">16</span>)<span class="op">.</span><span class="fu">substring</span>(<span class="dv">1</span>)<span class="sc">}</span><span class="vs">`</span><span class="op">;</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="at">score</span> <span class="op">=</span> error <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">pow</span>(w <span class="op">*</span> h<span class="op">,</span> area_power)<span class="op">;</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">split</span>() {</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> dx <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">w</span> <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> x1 <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">x</span><span class="op">,</span> x2 <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">x</span> <span class="op">+</span> dx<span class="op">;</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> dy <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">h</span> <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> y1 <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">y</span><span class="op">,</span> y2 <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">y</span> <span class="op">+</span> dy<span class="op">;</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>      <span class="kw">new</span> <span class="fu">Quad</span>(x1<span class="op">,</span> y1<span class="op">,</span> dx<span class="op">,</span> dy)<span class="op">,</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>      <span class="kw">new</span> <span class="fu">Quad</span>(x2<span class="op">,</span> y1<span class="op">,</span> dx<span class="op">,</span> dy)<span class="op">,</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>      <span class="kw">new</span> <span class="fu">Quad</span>(x1<span class="op">,</span> y2<span class="op">,</span> dx<span class="op">,</span> dy)<span class="op">,</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>      <span class="kw">new</span> <span class="fu">Quad</span>(x2<span class="op">,</span> y2<span class="op">,</span> dx<span class="op">,</span> dy)</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">;</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">computeHistogram</span>(x<span class="op">,</span> y<span class="op">,</span> w<span class="op">,</span> h) {</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> {data} <span class="op">=</span> imageContext<span class="op">.</span><span class="fu">getImageData</span>(x<span class="op">,</span> y<span class="op">,</span> w<span class="op">,</span> h)<span class="op">;</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> histogram <span class="op">=</span> <span class="kw">new</span> <span class="bu">Uint32Array</span>(<span class="dv">1024</span>)<span class="op">;</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> n <span class="op">=</span> data<span class="op">.</span><span class="at">length</span><span class="op">;</span> i <span class="op">&lt;</span> n<span class="op">;</span> i <span class="op">+=</span> <span class="dv">4</span>) {</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>    <span class="op">++</span>histogram[<span class="dv">0</span> <span class="op">*</span> <span class="dv">125</span> <span class="op">+</span> data[i <span class="op">+</span> <span class="dv">0</span>]]<span class="op">;</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>    <span class="op">++</span>histogram[<span class="dv">1</span> <span class="op">*</span> <span class="dv">205</span> <span class="op">+</span> data[i <span class="op">+</span> <span class="dv">1</span>]]<span class="op">;</span></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>    <span class="op">++</span>histogram[<span class="dv">2</span> <span class="op">*</span> <span class="dv">145</span> <span class="op">+</span> data[i <span class="op">+</span> <span class="dv">2</span>]]<span class="op">;</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>    <span class="op">++</span>histogram[<span class="dv">3</span> <span class="op">*</span> <span class="dv">156</span> <span class="op">+</span> data[i <span class="op">+</span> <span class="dv">3</span>]]<span class="op">;</span></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> histogram<span class="op">;</span></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">weightedAverage</span>(histogram) {</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> total <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> value <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">256</span><span class="op">;</span> <span class="op">++</span>i) total <span class="op">+=</span> histogram[i]<span class="op">,</span> value <span class="op">+=</span> histogram[i] <span class="op">*</span> i<span class="op">;</span></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>  value <span class="op">/=</span> total<span class="op">;</span></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> error <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">256</span><span class="op">;</span> <span class="op">++</span>i) error <span class="op">+=</span> (value <span class="op">-</span> i) <span class="op">**</span> <span class="dv">2</span> <span class="op">*</span> histogram[i]<span class="op">;</span></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> [value<span class="op">,</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sqrt</span>(error <span class="op">/</span> total)]<span class="op">;</span></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">colorFromHistogram</span>(histogram) {</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> [r<span class="op">,</span> re] <span class="op">=</span> <span class="fu">weightedAverage</span>(histogram<span class="op">.</span><span class="fu">subarray</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">256</span>))<span class="op">;</span></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> [g<span class="op">,</span> ge] <span class="op">=</span> <span class="fu">weightedAverage</span>(histogram<span class="op">.</span><span class="fu">subarray</span>(<span class="dv">256</span><span class="op">,</span> <span class="dv">512</span>))<span class="op">;</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> [b<span class="op">,</span> be] <span class="op">=</span> <span class="fu">weightedAverage</span>(histogram<span class="op">.</span><span class="fu">subarray</span>(<span class="dv">512</span><span class="op">,</span> <span class="dv">768</span>))<span class="op">;</span></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> [</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(r)<span class="op">,</span></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(g)<span class="op">,</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(b)<span class="op">,</span></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>    re <span class="op">*</span> <span class="fl">0.2989</span> <span class="op">+</span> ge <span class="op">*</span> <span class="fl">0.5870</span> <span class="op">+</span> be <span class="op">*</span> <span class="fl">0.1140</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">;</span></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>imageContext <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"owl.jpg"</span>)<span class="op">.</span><span class="fu">image</span>()<span class="op">.</span><span class="fu">then</span>(image <span class="kw">=&gt;</span> {</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> context <span class="op">=</span> DOM<span class="op">.</span><span class="fu">context2d</span>(width<span class="op">,</span> width<span class="op">,</span> <span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>  context<span class="op">.</span><span class="fu">drawImage</span>(image<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> width<span class="op">,</span> width)<span class="op">;</span></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> context<span class="op">;</span></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>TinyQueue <span class="op">=</span> <span class="pp">require</span>(<span class="st">"tinyqueue@2.0.3"</span>)</span>
 <span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>TinyQueue <span class="op">=</span> <span class="pp">require</span>(<span class="st">"tinyqueue@2.0.3"</span>)</span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>d3 <span class="op">=</span> <span class="pp">require</span>(<span class="st">"d3-interpolate@1"</span><span class="op">,</span> <span class="st">"d3-ease@1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>d3 <span class="op">=</span> <span class="pp">require</span>(<span class="st">"d3-interpolate@1"</span><span class="op">,</span> <span class="st">"d3-ease@1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-layout-panel" data-layout="[[49, -2, 49]]">
 <div class="quarto-layout-row">
 <div class="cell quarto-layout-cell" style="flex-basis: 49.0%;justify-content: flex-start;">
@@ -410,13 +372,13 @@ Ansin Building 604<br>
 </div>
 </div>
 <hr>
-<p><a href="https://mroberts.emerson.build/courses/vm-303-01/sp23/">Syllabus</a> (outside Canvas) | <a href="https://canvas.emerson.edu/courses/1932613/pages/mastodon-quickstart" title="Mastodon Quickstart">Mastodon Quickstart</a> |&nbsp;<a href="https://mroberts1.github.io/wordcloud">Wordcloud</a></p>
+<p><a href="https://mroberts.emerson.build/courses/vm-303-01/sp23/">Syllabus</a> (outside Canvas)</p>
 <hr>
 <section id="overview" class="level4">
 <h4 class="anchored" data-anchor-id="overview">Overview</h4>
 <p>This course considers the nature and contemporary forms of digital culture. Broadly speaking, this can be defined as the diverse range of symbolic practices through which communities affirm and maintain their cultural identities using digital media devices and interfaces in a globally networked society. While these practices are structured by deeply unequal power relations, are contradictory, and often come into conflict with one another, collectively they constitute what may be considered a global digital culture.</p>
 <p>A key component of the course is the automation of various forms of creative production, from writing to the visual arts, by natural-language processing computational systems (generally referred to as “artificial intelligence” or “AI”). The course addresses some of the many issues raised by such systems, with a particular focus on questions of aesthetics and the increasingly contested relationship between artists and algorithms. While such systems now demonstrably pass the Turing Test (i.e.&nbsp;pass as human or their products as human-produced), they also compel us to reconsider what we mean by “art,” or “intelligence” itself.</p>
-<p>A major theme of the course is the changing status of the <strong>future</strong> as a social imaginary. It has been suggested that while we live today in the futures imagined by writers and filmmakers since George Orwell’s novel <em>1984</em> (1949) and films like <em>2001: A Space Odyssey</em> (1968), <em>Blade Runner</em> (1982, set in 2019 and later 2049), or <em>Soylent Green</em> (1973, set in 2022), postmodern society has become so absorbed in commemorating its own past that it has become incapable of imagining its own future, dystopian or otherwise. As the course shows, historical projections of the future (often referred to as “retrofutures”) have paradoxically themselves become objects of postmodernist nostalgia.</p>
+<p>A major theme of the course is the changing status of the <strong>future</strong> as a social imaginary. It has been suggested that while we live today in the futures imagined by writers and filmmakers since George Orwell’s novel <em>1984</em> (1949) and films like <em>2001: A Space Odyssey</em> (1968), <em>Blade Runner</em> (1982, set in 2019 and later 2049), or <em>Soylent Green</em> (1973, set in 2022), postmodern society has become so absorbed in commemorating its own past that it has become incapable of imagining its own future, dystopian or otherwise. As the course shows, historical projections of the future (often referred to as <em>retrofutures</em>) have paradoxically themselves become objects of postmodernist nostalgia.</p>
 <hr>
 </section>
 <section id="format" class="level4">
@@ -435,13 +397,31 @@ Ansin Building 604<br>
 </ul>
 <hr>
 </section>
-<section id="texts" class="level4">
-<h4 class="anchored" data-anchor-id="texts">Texts</h4>
+<section id="sources-print" class="level4">
+<h4 class="anchored" data-anchor-id="sources-print">Sources: Print</h4>
 <p>Selected chapters from the texts below will be made available as PDFs; you are nevertheless encouraged to purchase at least several of texts that are of interest and read more of them.</p>
 <p>Note on formats: A number of texts listed in the bibliography are available as e-books and/or audiobooks. You are encouraged to make use not only of print media but also of these screen-based and audio formats.</p>
-<p><a href="https://mssv.net/">Adrian Hon</a>, <em>You’ve Been Played: How Corporations, Governments, and Schools Use Games to Control Us All</em>. New York: Basic Books, 2022.</p>
-<p><a href="https://manovich.net/">Lev Manovich</a> and Emanuele Arielli. <a href="http://manovich.net/index.php/projects/artificial-aesthetics-book"><em>Artificial Aesthetics: A Critical Guide to AI, Media and Design</em></a>. 2019-22.</p>
-<p><a href="https://joannemcneil.com/">Joanne McNeil</a>. <em>Lurking: How A Person Became A User</em>. New York: Farrar, Strauss, and Giroux, 2020. ISBN: 978-1250785756.</p>
+<ul>
+<li><p><a href="https://manovich.net/">Lev Manovich</a> and Emanuele Arielli. <a href="http://manovich.net/index.php/projects/artificial-aesthetics-book"><em>Artificial Aesthetics: A Critical Guide to AI, Media and Design</em></a>. 2019-22.</p></li>
+<li><p><a href="https://en.wikipedia.org/wiki/Amy_S._Bruckman">Amy Bruckman</a>, <em>Should You Believe Wikipedia? Online Communities and the Construction of Knowledge</em>. Cambridge: Cambridge University Press, 2022. <a href="bruckman-refs.html">References page</a></p></li>
+<li><p>Andrea Long Chu, <em>Females</em>. New York: Verso, 2019.</p></li>
+<li><p>Mark Fisher, <em>Ghosts of My Life: Writings on Depression, Hauntology and Lost Futures</em>. Winchester, UK, and Washington, USA: Zero Books, 2014.</p></li>
+</ul>
+<hr>
+</section>
+<section id="assignments-evaluation" class="level4">
+<h4 class="anchored" data-anchor-id="assignments-evaluation">Assignments &amp; Evaluation</h4>
+<p><strong>Discussion forums (20%)</strong></p>
+<p>One or more discussion posts per week on reading assignments, submitted anytime during the week of the assignments in question. A minimum of ten weekly posts is required.</p>
+<p><strong>Midterm Essay (20%)</strong></p>
+<p>Topics will be provided. 1,000-1,250 words (4-5 pages, double-spaced).</p>
+<p><strong>Alternative Communities Report (20%)</strong></p>
+<p>A report documenting your exploration of and reflections on one of the alternative communities introduced in the first half of the course. 1,000-1,250 words (4-5 pages double-spaced), with references and other submissions as relevant.</p>
+<p><strong>Generative Art Project (20%)</strong></p>
+<p>Using one of the generative art platforms focused on in the course (DALL-E 2, Midjourney, Stable Diffusion), submit one work that was generated using one of these systems. Images may be still or moving (e.g.&nbsp;animations, GIF loops, etc.)</p>
+<p>This work will be reviewed collectively by the group and displayed as a gallery, initally on Canvas, and later (with your permission) on the web.</p>
+<p><strong>Research Paper (20%)</strong></p>
+<p>Research on an approved topic relevant to the course. Individual or group. Further details will be provided after Spring Break. 1,250-1,500 words.</p>
 <hr>
 </section>
 <section id="schedule-of-classes" class="level4">
@@ -451,171 +431,134 @@ Ansin Building 604<br>
 <p><strong>I. Histories of the Future</strong></p>
 <p>2024-01-16_Tues</p>
 <p>Introduction</p>
+<p>2024-01-18_Thur</p>
+<p><br>
+Fisher, “‘<a href="https://canvas.emerson.edu/courses/1932613/files/144544397?wrap=1">The Slow Cancellation of the Future</a>’” (in <em>Ghosts of My Life</em>)</p>
 <p>Film: <em>The Shining</em><br>
 <em>Everywhere at the End of Time</em> (The Caretaker)</p>
-<p>2024-01-18_Thur</p>
-<p><strong>Terminal Lucidity</strong><br>
-Fisher, “‘<a href="https://canvas.emerson.edu/courses/1932613/files/144544397?wrap=1">The Slow Cancellation of the Future</a>’”</p>
 <hr>
 <p><em>Week 2</em></p>
 <p>2024-01-23_Tues</p>
-<p><strong>Lurking</strong><br>
-McNeil, <em>Lurking</em>: <a href="https://canvas.emerson.edu/courses/1932613/files/144549946?wrap=1">Introduction</a>, <a href="https://canvas.emerson.edu/courses/1932613/files/144549950?wrap=1">ch.&nbsp;2</a> (Anonymity)</p>
+<p><strong>Hauntology / Liminal Spaces</strong></p>
+<p>Mark Fisher, “<a href="pdf/hauntology.pdf">What is Hauntology?</a>” (<a href="https://www-jstor-org.proxy.emerson.edu/journal/filmquarterly">Film Quarterly</a>, Vol. 66, No.&nbsp;1 (Fall 2012), pp.&nbsp;16-24.</p>
+<p>Mark Fisher,&nbsp;<a href="weird-eerie-intro.pdf">Introduction to <em>The Weird and the Eerie</em></a>&nbsp;</p>
+<p>Also: Brian Luckhurst, “<a href="https://lareviewofbooks.org/article/making-sense-of-the-weird-and-the-eerie/">Making Sense of ’The Weird and the Eerie</a>’” (<em>Los Angeles Review of Books</em>, 11 March 2017)</p>
 <p>2024-01-25_Thur</p>
-<p>McNeil, <em>Lurking</em>, <a href="https://canvas.emerson.edu/courses/1932613/files/144549949?wrap=1">ch.&nbsp;4</a> (Sharing)</p>
+<p><strong>Capitalist Realism</strong></p>
+<p>Mark Fisher, <a href="pdf/capitalist-realism.pdf">Introduction to <em>Capitalist Realism</em></a></p>
 <hr>
 <p><em>Week 3</em></p>
-<p><strong>Alternate Timelines</strong></p>
+<p><strong>Gender, Online</strong></p>
 <p>2024-01-30_Tues</p>
-<p>Kaitlyn Tiffany, “<a href="https://canvas.emerson.edu/courses/1932613/files/145219877?wrap=1" title="'Remember the Internet'_ An Encyclopedia of Online Life - The Atlantic.pdf">You Probably Don’t Remember The Internet</a>”</p>
-<p>Choose and read <strong>one</strong> of these texts by <a href="http://www.instarbooks.com/remember-the-internet.html">instar books</a> (you will have to purchase either the print or ebook edition):</p>
-<ul>
-<li>Ana Valens, <a href="http://www.instarbooks.com/books/tumblr-porn.html"><em>Tumblr Porn</em></a></li>
-<li>Megan Milks, <a href="http://www.instarbooks.com/books/tori-amos-bootleg-webring.html"><em>Tori Amos Bootleg Webring</em></a></li>
-</ul>
+<p>Alex Quicho, “<a href="https://www.wired.com/story/girls-online-culture/">Everyone is a Girl Online</a>” (<em>WIRED</em>, 11 September 2023)</p>
+<p>Emma Copley Eisenberg, “<a href="https://www.heyalma.com/notes-on-frump-a-style-for-the-rest-of-us/">Notes on Frump: A Style for the Rest of Us</a>” (<em>heyalma</em>, 10 August 2017)</p>
 <p>2024-02-01_Thur</p>
-<ul>
-<li>Quinn Myers, <a href="http://www.instarbooks.com/books/google-glass.html"><em>Google Glass</em></a></li>
-</ul>
+<p>Alternative Communities: Mastodon and the Fediverse</p>
 <hr>
 <p><em>Week 4</em></p>
 <p>2024-02-06_Tues</p>
-<p>Jason Parham, “<a href="https://www.wired.com/story/gadget-lab-podcast-514/">Why The History of Black Twitter Needed to be Told</a>” (<em>WIRED</em>, 30 July 2021). Please listen to the podcast on this page first, then read the sections linked below.</p>
-<p>Jason Parham, “<a href="https://www.wired.com/story/black-twitter-oral-history-part-i-coming-together/">A People’s History of Black Twitter</a>” (<em>WIRED</em>, 29 July 2021)</p>
-<p><a href="pdf/black-twitter1.pdf">Part I</a> - <a href="pdf/blacktwitter2.pdf">Part II</a> - <a href="pdf/black-twitter3.pdf">Part III</a>&nbsp;</p>
-<p>2024-02-08_Thur</p>
-<p><strong>The Angel of History: Afrofuturism</strong><br>
-Mark Dery, “Black to the Future: Interviews with Samuel R. Delaney, Greg Tate, and Tricia Rose,” in <em>Flame Wars: The Discourse of Cyberculture</em> (Durham: Duke University Press, 1994</p>
-<p>Kodwo Eshun, “Further Considerations on Afrofuturism” (<em>The New Centennial Review</em>, vol.&nbsp;3, no. 2 (Summer 2003): 287-302)</p>
+<p><strong>Afrofuturism</strong><br>
+Kodwo Eshun, “Further Considerations on Afrofuturism” (<em>The New Centennial Review</em>, vol.&nbsp;3, no. 2 (Summer 2003): 287-302)</p>
 <p>Film (excerpt shown in class): <em>The Last Angel of History</em> (John Akomfrah/Black Audio Film Collective, 1995)</p>
 <p>Jason Farago, “<a href="https://www.bbc.com/culture/article/20160401-how-klees-angel-of-history-took-flight">How Klee’s ‘Angel of History’ Took Flight</a>” (BBC Culture, 6 April 2016)</p>
 <p>“<a href="http://www.africandigitalart.com/2017/10/05/the-futurist-digital-collages-by-manzel-bowman/">The Futurist Digital Collages of Manzel Bowman</a>” (<a href="http://africandigitalart.com/">African Digital Art</a> website)</p>
-<p>Recommended: <a href="https://mubi.com/films/the-african-desperate"><em>The African Desperate</em></a> (Martine Syms, 2022). Currently streaming on MUBI and Apple TV</p>
+<p>2024-02-08_Thur</p>
+<p>Alternative Communities: Digital Gardens</p>
 <hr>
 <p><em>Week 5</em></p>
-<p><strong>DEADLINE: Alternate Timelines paper</strong></p>
-<p><strong>II. Digital Imageworlds</strong></p>
 <p>2024-02-13_Tues</p>
-<p><strong>Point-and-Shoot: Lo-fi Photography and Retro-Aesthetics</strong><br>
-Huang, Kalley. “<a href="pdf/nyt-digital-camera.pdf">The Hottest Gen Z Gadget Is a 20-Year-Old Digital Camera</a>”</p>
-<p>“<a href="http://ivc.lib.rochester.edu/snapshot-aesthetics-and-the-strategic-imagination/">Snapshot Aesthetics and the Strategic Imagination</a>”</p>
+<p><strong>Sinofuturism</strong></p>
+<p><a href="https://sinofuturism.com/">Sinofuturism</a> (website)</p>
 <p>2024-02-15_Thur</p>
-<p><strong>Soft Images: From Photograph to Database</strong><br>
-Horning, “<a href="https://robhorning.substack.com/p/the-expanded-field">The Expanded Field</a>”</p>
-<p>Hoelzl and Marie, “<a href="pdf/softimage-expanded-photography&quot; in *Softimage*">Expanded Photography (The Desire for Endlessness)</a></p>
-<p>“<a href="https://openai.com/blog/dall-e-introducing-outpainting/">DALL-E: Introducting Outpainting</a>”</p>
+<p>Alternative Communities: Gemini</p>
 <hr>
 <p><em>Week 6</em></p>
 <p>2024-02-20_Tues NO CLASS (Mon schedule)</p>
 <p>2024-02-22_Thur</p>
-<p><strong>Object Detection</strong><br>
-Watch: <em>Dragonfly Eyes</em> (Xu Bing, 2017)</p>
-<p>Hatis Noit, “Aura” (music video)</p>
+<p><strong>II. Collaborative Learning</strong></p>
+<p><a href="https://en.wikipedia.org/wiki/Amy_S._Bruckman">Amy Bruckman</a>, <em>Should You Believe Wikipedia?</em></p>
+<ul>
+<li>ch.&nbsp;1: “Are Online ‘Communities’ Really Communities?”</li>
+<li>ch.&nbsp;2: “What Can Online Collaboration Accomplish?”</li>
+</ul>
 <hr>
 <p><em>Week 7</em></p>
-<p><strong>DEADLINE: ChatGPT Project</strong></p>
-<p><strong>III. Algorithmic Aesthetics</strong></p>
 <p>2024-02-27_Tues</p>
-<p><strong>The Sorcerer’s Apprentice: AI Art</strong><br>
-Manovich, “Who is an Artist in AI Era?” (<a href="http://manovich.net/index.php/projects/artificial-aesthetics-book"><em>Artificial Aesthetics</em></a>, ch.&nbsp;2)</p>
-<p><strong>Workshop: Midjourney</strong><br>
-<a href="https://www.midjourney.com/">Midjourney</a>: AI image synthesis</p>
-<p>Guy Parsons, “<a href="https://dallery.gallery/midjourney-guide-ai-art-explained/">Everything you wanted to know about Midjourney</a>” (5 August 2022)<br>
-<a href="https://midjourney.gitbook.io/docs/">Midjourney documentation</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Amy_S._Bruckman">Amy Bruckman</a>, <em>Should You Believe Wikipedia?</em></p>
+<ul>
+<li>ch.&nbsp;3: “Should You Believe Wikipedia?”</li>
+<li>ch.&nbsp;5: “How Do People Express Identity Online?”</li>
+</ul>
 <p>2024-02-29_Thur</p>
-<p><strong>Magic Spells</strong> Roland Barthes, “Rhetoric of the Image”</p>
-<p><strong>Workshop:</strong> <a href="https://canvas.emerson.edu/courses/1932613/files/144544393?wrap=1">DALL-E 2 Prompt Book</a>, <a href="https://lexica.art/">Lexica</a>, <a href="https://www.reddit.com/r/promptcraft/">promptcraft</a></p>
+<p>Alternative Communities: tilde</p>
 <hr>
 <p><em>Week 8</em></p>
-<p>2024-02-05_Tues</p>
-<p>Lev Manovich, “AI and Myths of Creativity” (<a href="http://manovich.net/index.php/projects/artificial-aesthetics-book"><em>Artificial Aesthetics</em></a>, ch.&nbsp;4)</p>
-<p><strong>Workshop: DALL-E 2</strong><br>
-<a href="https://openai.com/dall-e-2/">DALL-E 2</a><br>
-<a href="https://dallery.gallery/">dall-ery gall-ery</a></p>
-<p>2024-02-07_Thur</p>
-<p><strong>Workshop: Stable Diffusion</strong><br>
-<a href="https://stablediffusionweb.com/">Stable Diffusion</a></p>
+<p>2024-03-05_Tues</p>
+<p><a href="https://en.wikipedia.org/wiki/Amy_S._Bruckman">Amy Bruckman</a>, <em>Should You Believe Wikipedia?</em></p>
+<ul>
+<li>ch.&nbsp;6: “What Is Bad Online Behavior, and What Can We Do About It?”</li>
+</ul>
+<p>2024-05-07_Thur</p>
+<p>Alternative Communities: ASCII art</p>
+<p><strong>DEADLINE: Midterm</strong></p>
 <hr>
 <p>SPRING BREAK</p>
 <hr>
 <p><em>Week 9</em></p>
-<p><strong>DEADLINE: Generative Art Project</strong></p>
-<p><strong>IV. Gamification</strong></p>
+<p><strong>III. Creative Coding</strong></p>
 <p>2024-03-19_Tues</p>
-<p><strong>Gaming The System</strong><br>
-Hon, <em>You’ve Been Played</em>: Introduction, chapter 1</p>
+<p><strong>Generative Art</strong></p>
+<p><a href="http://www.generative-gestaltung.de/2/">Generative Design</a> (website)</p>
+<p><a href="https://www.generativehut.com/">Generative Hut</a> (website)</p>
 <p>2024-03-21_Thur</p>
-<p><strong>The Gamified Self</strong><br>
-Hon, <em>You’ve Been Played</em>: chapter 2</p>
+<p>Generative Art: Javascript</p>
 <hr>
 <p><em>Week 10</em></p>
 <p>2024-03-26_Tues</p>
-<p><strong>Gamified Relationships: Ghosting</strong><br>
-Narr and Luong, “Bored ghosts in the dating app assemblage: How dating app algorithms couple ghosting behaviors with a mood of boredom”</p>
-<p>Watch: <em>The Tinder Swindler</em> (Netflix)</p>
+<p><strong>Generative Music: Livecoding</strong></p>
 <p>2024-03-28_Thur</p>
-<p><strong>Non-Player Characters: Gamifying the Workplace</strong><br>
-Hon, <em>You’ve Been Played</em>: chapter 3</p>
 <hr>
 <p><em>Week 11</em></p>
 <p>2024-04-02_Tues</p>
-<p><strong>The Gamified Society</strong><br>
-Hon, <em>You’ve Been Played</em>: chapter 6 (Intro, The Myth and Reality of the Social Credit Score, “It Can’t Happen Here,” Propaganda, Wargames)</p>
+<p><strong>IV. Algorithmic Aesthetics</strong></p>
+<p>Lev Manovich, Artificial Aesthetics</p>
+<ul>
+<li><p>ch.&nbsp;2: “Who is an Artist in AI Era?”</p></li>
+<li><p>ch.&nbsp;4: “AI and Myths of Creativity”</p></li>
+</ul>
 <p>2024-04-04_Thur</p>
-<p>Hon, <em>You’ve Been Played</em>: chapter 6 (Elections, Civic Engagement, Education)</p>
+<p>Generative Art: Midjourney</p>
+<p><strong>DEADLINE: Alternative Communities Report</strong></p>
 <hr>
 <p><em>Week 12</em></p>
-<p><strong>DEADLINE: Open Topic Analysis Paper</strong></p>
 <p>2024-04-09_Tues</p>
-<p><strong>This Is Not A Game: ARGs</strong></p>
-<p>Hon, <em>You’ve Been Played</em>: chapter 7</p>
-<p>Watch: <em>The Institute</em></p>
+<p>AI Movies</p>
 <p>2024-04-11_Thur</p>
-<p><strong>Gameworlds</strong></p>
-<p>Hon, <em>You’ve Been Played</em>: chapter 8</p>
-<p>Watch: <em>Free Guy</em></p>
+<p>Generative Art: Runway</p>
 <hr>
 <p><em>Week 13</em></p>
 <p>2024-04-16_Tues</p>
-<p>Hon, <em>You’ve Been Played</em>: chapters 9-10</p>
+<p>AI Movies (cont.)</p>
 <p>2024-04-18_Thur Make-up Day</p>
+<p><strong>DEADLINE: Research Paper</strong></p>
 <hr>
 <p><em>Week 14</em></p>
-<p><strong>DEADLINE: Gamification Projects</strong></p>
 <p>2024-04-23_Tues</p>
-<p>Gamification Project Presentations</p>
+<p>Presentations: Generative Art</p>
 <p>2024-04-25_Thur</p>
-<p>Gamification Project Presentations</p>
+<p>Presentations: Generative Art</p>
 <hr>
 <p><em>Week 15</em></p>
 <p>2024-04-30_Tues</p>
-<p>Gamification Project Presentations</p>
+<p>Presentations: Generative Art</p>
 <p>2024-05-02_Thur</p>
-<p>Gamification Project Presentations</p>
+<p>Presentations: Generative Art</p>
+<p><strong>DEADLINE: Generative Art Projects</strong></p>
 <p>2024-05-03 Fri <strong>Last day of classes</strong></p>
 <hr>
 </section>
-<section id="assignments-evaluation" class="level4">
-<h4 class="anchored" data-anchor-id="assignments-evaluation">Assignments &amp; Evaluation</h4>
-<p><strong>1. Alternate Timelines (15%)</strong></p>
-<p>Individual. Using the Alternative Timelines reading assignments as a model, write a short paper of 1,000 words in length (4 pages double-spaced, excluding bibliography) outlining your personal alternate timeline of the internet.</p>
-<p><strong>2. Open Topic Analysis Paper (15%)</strong></p>
-<p>Individual. Short paper analysis (1,000 words, 4 pages double-spaced) on any of the topics discussed in the course to date (Week 12)</p>
-<p><strong>3. Discussion forums (20%)</strong></p>
-<p>Individual. One or more discussion posts per week on reading assignments, submitted anytime during the week of the assignments in question. A minimum of ten weekly posts is required.</p>
-<p><strong>4. ChatGPT (15%)</strong></p>
-<p>Individual. Write a prompt for ChatGPT (or a similar language-based model) that generates a 500-word essay on a subject of your choice. (You will likely have to experiment with customizing the prompt in order to generate a satisfactory result.). Then write (do not generate) a 500-word reflection on the output from the prompt.</p>
-<p>Remember that this output is the result of pattern matching from very large datasets, not intelligence in the human sense; therefore, avoid vague speculations about whether ChatGPT can be considered as intelligent, or even sentient. Instead, evaluate the output purely <strong>as if</strong> it was written by a human subject. How satisfactory is it as a response to the prompt? What are its strengths, or blind spots? Can it pass for having been written by a human? If not, why not? Is it useful from a conceptual or analytical standpoint? If so, how?</p>
-<p><strong>5.Generative Art Gallery (15%)</strong></p>
-<p>Individual. Using one of the systems focused on in the course (DALL-E 2, Midjourney, Stable Diffusion), submit one work that was generated using one of these systems. Images may be still or moving (e.g.&nbsp;animations, GIF loops, etc.)</p>
-<p>Multiples are acceptable, even encouraged. This work will be reviewed collectively by the group and displayed as a gallery, initally on Canvas, and later (with your permission) on the web.</p>
-<p><strong>6. Gamification Project (20%)</strong></p>
-<p>Group project (2-3 students).</p>
-<p>Drawing on your reading of Adrian Hon’s book <em>You’ve Been Played</em>, in consultation with your other group members, develop a gamification strategy for a product, service, organization, or institution of your choice. This may be a real, existing product, etc., or one that does not (yet) exist.</p>
-<p>Write a proposal of approximately 1,000-1,500 words in length (4-6 pages, double-spaced) and prepare a presentation outlining the project that you have in mind: primary objectives, target audience, platforms used, game mechanics (how will people play it?), outcomes (points, rewards, badges, leaderboards, etc). Projects will be presented and discussed with the class during the last four meetings.</p>
-<hr>
-<section id="bibliography" class="level5">
-<h5 class="anchored" data-anchor-id="bibliography"><strong>Bibliography</strong></h5>
+<section id="bibliography" class="level4">
+<h4 class="anchored" data-anchor-id="bibliography"><strong>Bibliography</strong></h4>
 <p>[A] = audiobook (<a href="http://audible.com/">Audible.com</a>)</p>
 <p>Barthes, Roland. “Rhetoric of the Image,” in <em>Image Music Text</em>. Essays selected and translated by Stephen Heath. London: FontanaPress, 1977: 32-51.</p>
 <p>Dery, Mark. “Black to the Future: Interviews with Samuel R. Delaney, Greg Tate, and Tricia Rose,” in <em>Flame Wars: The Discourse of Cyberculture</em> (Durham: Duke University Press, 1994</p>
@@ -631,7 +574,7 @@ Hon, <em>You’ve Been Played</em>: chapter 6 (Intro, The Myth and Reality of th
 <p>“<a href="http://ivc.lib.rochester.edu/snapshot-aesthetics-and-the-strategic-imagination/">Snapshot Aesthetics and the Strategic Imagination</a>”. <em>InVisible Culture: An Electronic Journal for Visual Culture</em>, 18 (10 April 2013).</p>
 <p>[A] Tiffany, Kaitlyn. <em>Everything I Need I Get From You: How Fangirls Created the Internet as We Know It</em>. Farrar, Strauss &amp; Giroux, 2022. ISBN: 978-0374539184.</p>
 <p>[A] Womack, Ytasha L. <a href="https://ebookcentral.proquest.com/lib/emerson/reader.action?docID=1381831&amp;ppg=1"><em>Afrofuturism: The World of Black Sci-Fi and Fantasy Culture</em></a> (Chicago: Lawrence Hill Books, 2013).</p>
-</section>
+<hr>
 </section>
 <section id="policies" class="level4">
 <h4 class="anchored" data-anchor-id="policies">Policies</h4>
