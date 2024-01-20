@@ -1,0 +1,15 @@
+{
+  "hash": "920497050adcabda250018c9bbe48bf7",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"W9: AI Film Festival 2023\"\ntoc: false\n---\n\n\n\n\n***\n\n*Generation* - Riccardo Fusetti  \n\n\n{{< video video/generation.mp4 width=\"320\" height=\"180\" >}}\n\n\n\n***\n\n*Checkpoint* - Áron Filkey and Joss Fong  \n\n\n{{< video video/checkpoint.mp4 width=\"320\" height=\"180\" >}}\n\n\n\n***\n\n*PLSTC* - Laen Sanches  \n\n\n{{< video video/plstc.mp4 width=\"320\" height=\"180\" >}}\n\n\n\n***\n\n*Landscape* - Kyle Goodrich \n\n\n{{< video video/landscape.mp4 width=\"320\" height=\"180\" >}}\n\n\n\n***\n\n*A$AP Rocky - Shittin Me* - Dan Streit and Cole Kush    \n\n\n{{< video video/shittin-me.mp4 width=\"320\" height=\"180\" >}}\n\n\n\n***\n\n*Expanded Childhood* - Sam Lawton  \n\n\n{{< video video/expanded-childhood.mp4 width=\"320\" height=\"180\" >}}\n\n\n\n***",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

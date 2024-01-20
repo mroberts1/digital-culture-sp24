@@ -1,0 +1,16 @@
+{
+  "hash": "1ca5a274c1dc8968c804a119a6663f70",
+  "result": {
+    "markdown": "---\ntitle: \"W9: AI Film Festival 2023\"\ntoc: false\n---\n\n\n\n\n\n*Generation* - Riccardo Fusetti  \n\n:::{.column-margin}\n\n\n{{< video video/generation.mp4 width=\"320\" height=\"180\" >}}\n\n\n\n\n::: \n\n*Expanded Childhood* - Sam Lawton  \n\n\n\n{{< video video/expanded-childhood width=\"320\" height=\"180\" >}}\n\n",
+    "supporting": [
+      "w9-aiff_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": null,
+    "postProcess": false
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "w5-digital-imageworlds.qmd": {
+    "w5-digital-imageworlds.html": "6500952b",
+    "w5-digital-imageworlds.tex": "dc501a7b"
+  },
+  "w2-lurking.qmd": {
+    "w2-lurking.html": "441bda3e",
+    "w2-lurking.tex": "155ef194"
+  },
+  "resources/mastodon.qmd": {
+    "mastodon.html": "00479829",
+    "mastodon.tex": "740bd84d"
+  },
+  "w3-timelines.qmd": {
+    "w3-timelines.html": "ea620d72",
+    "w3-timelines.tex": "1b66c107"
+  },
+  "index.qmd": {
+    "index.html": "33bd4479",
+    "index.tex": "06aa0230"
+  },
+  "w4-afrofuturism.qmd": {
+    "w4-afrofuturism.html": "0f49acb4",
+    "w4-afrofuturism.tex": "cc97641a"
+  },
+  "w9-aiff.qmd": {
+    "w9-aiff.html": "161dd9cc",
+    "w9-aiff.tex": "f072a660"
+  },
+  "syllabus.qmd": {
+    "syllabus.html": "f03c741f"
+  },
+  "observable.qmd": {
+    "observable.html": "fcf0b941"
+  },
+  "vanilla-boids.qmd": {
+    "vanilla-boids.html": "e1d965b3"
+  },
+  "webgl-sobel.qmd": {
+    "webgl-sobel.html": "13ddc648"
+  },
+  "altered-world.qmd": {
+    "altered-world.html": "efa97e93"
+  },
+  "smt-syllabus-summer23.qmd": {
+    "smt-syllabus-summer23.html": "0e31f4a7"
+  }
+}

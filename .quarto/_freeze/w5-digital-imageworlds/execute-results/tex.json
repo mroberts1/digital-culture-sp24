@@ -1,0 +1,16 @@
+{
+  "hash": "6fa0e83b35a4028ae48f22145fbf42a7",
+  "result": {
+    "markdown": "---\ntitle: \"W5: Digital Imageworlds\"\ntoc: false\n---\n\n\n\n\n\n### Point-and-Shoot: Lo-fi Photography and Retro-Aesthetics\n\n**The Kodak Brownie**\n\n[Alise Tiefentale](http://www.alisetifentale.net/), [Art of the Masses: From Kodak Brownie to Instagram](http://www.alisetifentale.net/article-archive/2016/11/9/art-of-the-masses-from-kodak-brownie-to-instagram) [pdf](pdf/art-masses-tifentale.pdf)\n\n\"[The Kodak Girl: Women in Kodak Advertising](https://library.torontomu.ca/asc/2013/10/the-kodak-girl-women-in-kodak-advertising/)\"\n\n**Instagram**\n\nLev Manovich, \"[Subjects and Styles in Instagram Photography (Part 1)](http://manovich.net/index.php/projects/subjects-and-styles-in-instagram-photography-part-1)\"; \"[Subjects and Styles in Instagram Photography (Part 2)](http://manovich.net/index.php/projects/subjects-and-styles-in-instagram-photography-part-2)\n\n**Amalia Ulman**\n\n[Amalia Ulman](https://amaliaulman.eu/) website\n\n[Artist Profile: Amalia Ulman](http://rhizome.org/editorial/2012/nov/07/artist-profile-amalia-ulman/) \n\nEmilie Friedlander, \"[Social Anxiety: Why Amalia Ulman's Fake 'Middlebrow' Instagram Is No Different From Yours](http://www.thefader.com/2014/11/07/social-anxiety-why-amalia-ulmans-middlebrow-instagram-feed-is-no-different-from-yours)\", *Fader*, 7 November 2014.\n\n\"[Amalia Ulman: Meme Come True](http://www.dazeddigital.com/artsandculture/article/23700/1/amalia-ulman-meme-come-true)\" (*Dazed*)\n",
+    "supporting": [
+      "w5-digital-imageworlds_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": null,
+    "postProcess": false
+  }
+}
