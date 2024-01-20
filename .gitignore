@@ -7,7 +7,6 @@
 .jpeg
 .gif
 .pdf
-.lectures
 .zip
 README.html
 /.quarto/
@@ -15,3 +14,5 @@ README.html
 /pdf/
 /.luarc.json
 /img/
+/video/
+/fonts/
