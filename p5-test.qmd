@@ -1,0 +1,47 @@
+---
+title: ''
+author: ''
+format: html
+page-layout: full
+execute:
+  echo: false
+observable: https://observablehq.com/d/6ccbe07dfce4cf4e
+---
+
+```{r}
+#| label: load-packages
+#| include: false
+
+library(tidyverse)
+library(palmerpenguins)
+```
+
+```{ojs}
+p5((sketch) => {
+  sketch.setup = () => {
+    const c = sketch.createCanvas(width, 400, sketch.WEBGL)
+  }
+  
+  sketch.draw = () => {
+    sketch.background(0)
+    sketch.rotateX(sketch.frameCount * 0.01)
+    sketch.rotateY(sketch.frameCount * 0.01)
+    sketch.noFill()
+    sketch.stroke(255)
+    sketch.torus(100, 50)
+
+    // sketch.noLoop()
+  }
+})
+
+function* p5(sketch) {
+  const element = DOM.element('div')
+  yield element
+  
+  const instance = new P5(sketch, element, true)
+
+  return element
+}
+
+P5 = require('https://unpkg.com/p5/lib/p5.js')
+```
