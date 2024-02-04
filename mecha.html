@@ -2,12 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.540">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="">
 
-<title>- Mastodon: Quickstart</title>
+<title>-</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +24,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="..//img/cropped-cropped-flourish-1-270x270.gif" rel="icon" type="image/gif">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href=".//img/cropped-cropped-flourish-1-270x270.gif" rel="icon" type="image/gif">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,9 +76,8 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<link rel="stylesheet" href="../custom.scss">
-<meta name="twitter:title" content="- Mastodon: Quickstart">
-<meta name="twitter:description" content="">
+<link rel="stylesheet" href="custom.scss">
+<meta name="twitter:title" content="-">
 <meta name="twitter:creator" content="@mroberts_vma">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -86,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title"></span>
     </a>
   </div>
@@ -97,13 +100,32 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../syllabus.html"> 
+    <a class="nav-link" href="./syllabus.html"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Resources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
+        <li>
+    <a class="dropdown-item" href="./mecha.html">
+ <span class="dropdown-text">SVG art</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./resources/irc-quickstart.html">
+ <span class="dropdown-text">IRC Quickstart</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./resources/mastodon-quickstart.html">
+ <span class="dropdown-text">Mastodon Quickstart</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -140,54 +162,49 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Mastodon: Quickstart</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><img src="../img/CollegeLockupStacked.jpg" class="img-fluid"></p>
+<p><img src="./img/CollegeLockupStacked.jpg" class="img-fluid"></p>
 </div></div>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full column-page-left" id="quarto-document-content">
 
 
 
 
+<section id="vm303-01-studies-in-digital-media-culture" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="vm303-01-studies-in-digital-media-culture">VM303-01 Studies in Digital Media &amp; Culture</h2>
+<section id="generative-svg" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="generative-svg">Generative SVG</h4>
+<hr>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="margin-aside"><small>Abstract Mecha by <a href="https://www.instagram.com/makio135">Lionel Radisson</a>. Gifs from SVGs (Scalable Vector Graphics) generated with Javascript in <a href="https://observablehq.com/@makio135/abstract-mecha-animated-version">Observable notebook</a> using <a href="https://quarto.org/">Quarto</a> IDE.</small></span></div></div>
+<div>
 
-<p>For a quick intro, watch this video:</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/S57uhCQBEk0" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>Then read one or more of these articles:</p>
-<ul>
-<li><a href="https://medium.com/@VirtualAdept/a-friendly-introduction-to-the-fediverse-5b4ef3f8ed0e">A Friendly Introduction to the Fediverse</a></li>
-<li><a href="https://torresjrjr.com/archive/2020-07-19-guide-to-the-fediverse">Guide to the Fediverse</a></li>
-<li><a href="https://spaceshipsin.space/blog/what-is-mastodon.html">What Is Mastodon?</a></li>
-</ul>
-<p>If you’re wondering why you should care about distributed social networks, read <a href="https://medium.com/@npfoss/the-case-for-a-decentralized-social-network-2683b727abf5">this article</a>.</p>
-<p>Mastodon is a loosely-connected network of communities, similar in some ways to the federated &nbsp;structure of the U.S. itself - hence the term <strong>fediverse</strong>. You can think of it like a large, interconnected network of Twitters, albeit without ads or data-collecting. Mastodon (like Pleroma) is basically software that enables anyone to set up their own social media server and host a community on it - you can even do it <a href="https://federation.spacebear.ee">yourself</a>.&nbsp;</p>
-<p>Each Mastodon community (more commonly known as an <strong>instance</strong>) has its own particular flavor, and there are communities in many languages. Each community also has its terms of service, that you should read carefully and observe.</p>
-<p>Mastodon instances vary in size from just a handful of members to thousands. Many allow you to register a new account without approval, but for a lot you have to submit a registration request and may not be approved because some instances limit numbers to people who are referred by existing members. This is because communities typically have a very specific focus, whatever that may be. My own community, for example, is comprised mainly of coders, game designers, and digital artists. You can still read posts, though - if you’re interested, here’s my <a href="https://merveilles.town/web/accounts/6363">account page</a>.</p>
-<p>Instances are connected with one another, so that you only need to set up an account on one. If you follow someone on a different instance, that person’s posts on that instance will appear in your feed on your instance - the federated model again.</p>
-<p>Of course, if people on one instance don’t like the community on another, for whatever reason, they can simply disconnect from it. So the affordances of instances, and the relations between them, are quite resilient against the usual abuses of social media like trolling, spamming, etc.</p>
-<p>Choosing an instance to register with may seem tricky at the beginning because there are so many! Take your time, and keep in mind that you can always switch instances later if you find another one that you like better - or just have multiple accounts on several instances (I have 5-6).</p>
-<p>After you join a community, just hang out there and see what goes on. Be sure to follow the account <a href="https://merveilles.town/web/accounts/99753">@feditips@mstdn.social</a>, which has lots of useful tips about using Mastodon and other distributed services.</p>
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="4">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><a href="gif/mecha.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="gif/mecha.gif" class="img-fluid" alt="An SVG generated with a mecha anime-type pattern"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><a href="gif/mecha2.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="gif/mecha2.gif" class="img-fluid" alt="An SVG generated with a mecha anime-type pattern"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><a href="gif/mecha3.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="gif/mecha3.gif" class="img-fluid" alt="An SVG generated with a mecha anime-type pattern"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><a href="gif/mecha4.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="gif/mecha4.gif" class="img-fluid" alt="An SVG generated with a mecha anime-type pattern"></a></p>
+</div>
+</div>
+</div>
+<hr>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -495,7 +512,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -717,9 +739,34 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","loop":false,"selector":".lightbox"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 
 
-<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
