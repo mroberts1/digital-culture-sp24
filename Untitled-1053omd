@@ -1,0 +1,84 @@
+
+# Homage to De Stijl
+> Black, blue, red and yellow lines crossing the canvas horizontally and vertically at random times.
+
+___
+```
+bnb({
+  w: 600, h: 600,
+  numFrames: 64,
+  fps: 10,
+  record: true,
+  
+  setup: (s, g) => {
+    const ww = 40
+    const colors = ['black', 'yellow', 'dodgerblue', 'red']
+
+    class Line {
+      constructor(x1,y1,x2,y2, offset) {
+        this.x1 = x1
+        this.y1 = y1
+        this.x2 = x2
+        this.y2 = y2
+        this.offset = offset
+        this.colorIndex = randInt(3)
+      }
+
+      display(s, t) {
+        t = (t + this.offset) % 1
+
+        let t1 = ease(linearstep(t, 0, .5),1)
+        let t2 = ease(linearstep(t, .4, .9),1)
+        let x1 = (s.lerp(this.x1, this.x2, t1)/ww | 0 ) * ww
+        let y1 = (s.lerp(this.y1, this.y2, t1)/ww | 0 ) * ww
+        let x2 = (s.lerp(this.x1, this.x2, t2)/ww | 0 ) * ww
+        let y2 = (s.lerp(this.y1, this.y2, t2)/ww | 0 ) * ww
+
+        if(x1 !== x2 || y1 !== y2) {
+          s.fill(colors[this.colorIndex])
+          s.rect(x2, y2, ww, y1-y2)
+        }
+      }
+
+      display2(s, t) {
+        t = (t + this.offset + .5) % 1
+
+        let t1 = ease(linearstep(t, 0, .4),1)
+        let t2 = ease(linearstep(t, .3, .7),1)
+        let x1 = (s.lerp(this.x1, this.x2, t1)/ww | 0 ) * ww
+        let y1 = (s.lerp(this.y1, this.y2, t1)/ww | 0 ) * ww
+        let x2 = (s.lerp(this.x1, this.x2, t2)/ww | 0 ) * ww
+        let y2 = (s.lerp(this.y1, this.y2, t2)/ww | 0 ) * ww
+
+        if(x1 !== x2 || y1 !== y2) {
+          s.fill(colors[(this.colorIndex + 1) % colors.length])
+          s.rect(y2, x2, y1-y2, ww)
+        }
+      }
+    }
+
+    g.lines = array(64).map(i => {
+      let x = randInt(g.w/ww) * ww
+      return new Line(x, -g.h, x, g.h*2, random())
+    })
+    g.lines = shuffle(g.lines)
+  },
+  
+  draw: (s, t, g) => {
+    s.background(0)
+    s.noStroke()
+    
+    g.lines.forEach(l => {
+      l.display(s, t)
+      l.display2(s, t)
+    })
+  }
+})
+```
+___
+## Imports
+```
+import {bnb} from '@makio135/bnb'
+
+import {ease, linearstep, array, random, randInt, shuffle} from '@makio135/utilities'
+```

@@ -1,21 +1,3 @@
----
-title: ''
-author: ''
-format: html
-page-layout: full
----
-
-```{r}
-#| label: load-packages
-#| include: false
-
-library(tidyverse)
-library(palmerpenguins)
-```
-
-## VM303-01 Studies in Digital Media & Culture
-
-::: {layout="[[49, -2, 49]]"}
 ```{ojs}
 {
   let fire = null;
@@ -88,18 +70,7 @@ function drawFire(app, fire) {
     });
 }
 
-cm = require(await FileAttachment("cm.umd.min.js").url())
+cm = require("@charming-art/charming@0.0.6")
 
 import { quote } from "@pearmini/charming-shared"
 ```
-
-[Department of Visual & Media Arts](https://emerson.edu/academics/academic-departments/visual-media-arts)\
-[Emerson College](https://emerson.edu/)\
-Spring Semester 2024\
-Tues/Thur 16 January---2 May 2024\
-6:00-7:45 p.m.\
-Ansin Building 604\
-[Dr. Martin Roberts](http://mroberts.emerson.build/)\
-:::
-
-------------------------------------------------------------------------

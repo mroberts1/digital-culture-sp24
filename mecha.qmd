@@ -1,0 +1,93 @@
+---
+title: ''
+author: ''
+format: html
+page-layout: article
+---
+
+```{r}
+#| label: load-packages
+#| include: false
+
+library(tidyverse)
+library(palmerpenguins)
+```
+
+## VM303-01 Studies in Digital Media & Culture
+
+#### Generative SVG
+
+***
+
+:::{.aside}
+<br />
+Abstract Mecha by [Lionel Radisson](https://www.instagram.com/makio135). Gifs from SVGs (Scalable Vector Graphics) generated with Javascript in [Observable](https://observablehq.com/@makio135/abstract-mecha-animated-version) using [Quarto](https://quarto.org/) IDE.
+:::
+
+::: {layout-ncol="8"}
+![](gif/mecha1.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"} 
+
+![](gif/mecha2.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha3.gif){.lightbox fig-alt="An SVG gnerated with a mecha anime-type pattern"}
+
+![](gif/mecha4.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha5.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha6.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha7.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha8.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha9.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha10.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha11.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha12.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha13.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha14.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha15.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha16.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha17.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha18.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha19.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha20.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha21.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha22.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha23.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha24.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha25.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha26.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha27.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha28.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha29.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha30.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha31.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+
+![](gif/mecha32.gif){.lightbox fig-alt="An SVG generated with a mecha anime-type pattern"}
+:::
+
+------------------------------------------------------------------------

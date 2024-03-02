@@ -2,7 +2,7 @@ project:
   type: website
   
 website:
-  title: "  "
+  title: "VM303-SP24"
   site-url: https://mroberts1.github.io/digital-culture-sp24/
   twitter-card:
     creator: "@mroberts_vma"
@@ -18,6 +18,14 @@ website:
         file: index.qmd
       - text: Syllabus
         file: syllabus.qmd
+      - text: Pages
+        menu: 
+          - text: Generating SVGs
+            file: mecha.qmd
+          - text: IRC Quickstart
+            file: resources/irc-quickstart.qmd
+          - text: Mastodon Quickstart
+            file: resources/mastodon-quickstart.qmd
     right:
       - icon: envelope
         aria-label: envelope
@@ -54,4 +62,4 @@ fig-responsive: true
 image-alt: " "
 execute:
   echo: false
-editor: visual
+editor: source

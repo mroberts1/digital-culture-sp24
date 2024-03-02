@@ -1,0 +1,81 @@
+---
+title: ' '
+author: ' '
+format: html
+page-layout: article
+observable: 'https://observablehq.com/@lsh/plot-voronoi'
+---
+
+```{r}
+#| label: load-packages
+#| include: false
+
+library(tidyverse)
+library(palmerpenguins)
+```
+
+#### Internet Relay Chat: Quickstart
+
+**INTRODUCTION**
+
+Internet Relay Chat (IRC) is a decentralized communication network that enables encrypted synchronous and asynchronous messaging, without tracking or advertising. It has been used for decades by the computer programming communities around the globe but has more recently begun to be used beyond these.
+
+The infrastructure consists of **servers** (aka nodes) that users connect to using **client** programs, or **web apps** in a browser.
+
+Once connected to a server, users may join a large number of channels (designated with a #) which may be public or private, and/or may start their own channels.
+
+------------------------------------------------------------------------
+
+**SETUP**
+
+While you can login to servers as a guest, if you're going to use IRC often you'll need to register an account with your chosen nickname (aka "Nick").
+
+1\. Start by installing a client app on your computer. For a cross-platform list of recommended clients, see [this page](https://libera.chat/guides/clients). For mobile clients, iOS doesn't have many options - [Limechat](https://apps.apple.com/us/app/limechat-irc-client/id298766460) is recommended, but not free; for a free option, try [Igloo](https://apps.apple.com/us/app/igloo-irc/id1545797402?mt=8). See the previous link for Android recommendations.
+
+2\. After installing the client app, connect to an IRC server using your preferred nickname and register an account with your preferred email address and password, then activate it via the message sent to the email account. The standard command is: 
+
+/msg NickServ REGISTER \<password\> \<email address\> \[after initially logging in with your preferred username and no password\]
+
+3\. Once your account is confirmed, you should be able to login from your client app (or the server's web app) using your nickname and the password you set.
+
+4\. You can then browse lists of channels, join a specific channel, or start one of your own.
+
+5\. Once connected to a server, do /msg NickServ HELP for a list of help commands
+
+6\. On Libera.Chat, connect to the channel #vm303 for the channel for this class.
+
+------------------------------------------------------------------------
+
+**COMMANDS**
+
+Here's a useful page with some basic commands to use on IRC. Key point to keep in mind: 
+
+"Always remember to put the / before commands, and no / when you want the whole channel to see what you are typing. Whatever you type, simply goes to the entire channel. Precede your lines with a / when you wish to execute an IRC command and when you do not wish the text to be sent to the entire channel."
+
+------------------------------------------------------------------------
+
+**SERVERS**
+
+[Libera.Chat](https://libera.chat/) (includes [webchat](https://web.libera.chat/))
+
+[EsperNet](https://esper.net/) (see server list; also has [webchat](https://webchat.esper.net/))
+
+------------------------------------------------------------------------
+
+**GUIDELINES**
+
+You can't be logged into a server from your client program and a web browser at the same time. Disconnect from the server on one, then connect with the other. If you try to connect twice the system will log you in with an auto-generated ID, which quickly gets confusing.
+
+------------------------------------------------------------------------
+
+**XMPP**
+
+IRC is a messaging **protocol**, just as http is the protocol used for serving web pages. [XMPP](https://xmpp.org/uses/instant-messaging.html) is a more experimental  protocol that some of you might be interested in checking out. It works similarly to IRC, with servers and clients, and some clients can use either IRC or XMPP servers. Zoom uses XMPP for its chat function and WhatsApp uses a variation of the XMPP protocol.
+
+You can register an account on Ben Harris's [server](https://hmm.st/), using either a [client](https://hmm.st/#clients) app or the [webchat](https://movim.hmm.st/) app[.](https://movim.hmm.st/)
+
+ Another XMPP server is [xmpp.jp](https://www.xmpp.jp/signup), which also has a [webchat](https://www.xmpp.jp/client/) option.
+
+For a client app, Mac users can try [Beagle IM](https://beagle.im/); on iOS, [Siskin](https://siskin.im/).
+
+------------------------------------------------------------------------

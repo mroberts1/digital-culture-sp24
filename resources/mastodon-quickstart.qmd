@@ -1,6 +1,19 @@
 ---
-title: "Mastodon: Quickstart"
+title: ' '
+author: ' '
+format: html
+page-layout: article
 ---
+
+```{r}
+#| label: load-packages
+#| include: false
+
+library(tidyverse)
+library(palmerpenguins)
+```
+
+#### Mastodon: Quickstart
 
 For a quick intro, watch this video:
 
